@@ -1,0 +1,6 @@
+<h1>List of all Genres in your Library</h1>
+<ul>
+  <% @genres.each do |g| %>
+  <li><%= g.name.capitalize %></li>
+  <% end %>
+</ul>
