@@ -2,7 +2,6 @@ module Slugifiable
 
   module InstanceMethods
     def slugify
-      # puts "Instance Test"
       self.name.gsub(/[^\w\s]/, "").gsub(/[\s]/, "-")
     end
   end
