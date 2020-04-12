@@ -1,9 +1,15 @@
-class Slugifiable
-  def slugify
-    puts "Instance Test"
+module Slugifiable
+
+  module InstanceMethods
+    def slugify
+      # puts "Instance Test"
+      self.name.gsub(/[^\w\s]/, "").gsub(/[\s]/, "-")
+    end
   end
 
-  def self.slug
-    puts "Class Test"
+  module ClassMethods
+    def find_by_slug(slug)
+      puts "Class Test"
+    end
   end
 end
