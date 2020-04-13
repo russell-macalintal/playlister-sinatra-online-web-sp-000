@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
-    erb :'songs/new'
+    erb :'/songs/new'
   end
 
   post '/songs' do
@@ -15,11 +15,11 @@ class SongsController < ApplicationController
   end
 
   get '/songs/:slug' do
-    erb :'songs/show'
+    erb :'/songs/show'
   end
 
   get '/songs/:slug/edit' do
-    erb :'songs/edit'
+    erb :'/songs/edit'
   end
 
   patch '/songs/:slug' do
