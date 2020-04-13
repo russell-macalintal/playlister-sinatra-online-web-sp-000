@@ -1,7 +1,13 @@
-<h1>Artist: <%= @artist.name %></h1>
-<h2>Songs: </h2>
+<h2>Artist: <%= @artist.name %></h2>
+<h2>Songs:</h2>
 <ul>
   <% @artist.songs.each do |s| %>
   <li><a href="/songs/<%= s.slug %>"><%= s.name %></li>
+  <% end %>
+</ul>
+<h2>Genres:</h2>
+<ul>
+  <% @artist.genres.each do |g| %>
+  <li><a href="/songs/<%= g.slug %>"><%= g.name.capitalize %></li>
   <% end %>
 </ul>
