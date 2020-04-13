@@ -2,7 +2,7 @@ module Slugifiable
 
   module InstanceMethods
     def slug
-      self.name.gsub(/[^\w\s]/, "").gsub(/[\s]/, "-")
+      self.name.downcase.gsub(/[^\w\s]/, "").gsub(/[\s]/, "-")
     end
   end
 
